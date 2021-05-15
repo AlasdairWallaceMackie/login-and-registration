@@ -49,6 +49,7 @@ def login_user(request):
         user1 = User.objects.get( email = request.POST['login_email'].lower() )
     except:
         messages.error(request, "Email not found")
+        print("Email not found")
         return redirect('/')
 
     if not bcrypt.checkpw( request.POST['login_password'].encode(), user1.password.encode()):
@@ -81,6 +82,8 @@ def success(request):
         <ul>
             <li>You navigated to this page by mistake</li>
             <li>You entered a duplicate email</li>
+            <li>Incorrect password</li>
+            <li>Email not found</li>
         </ul>
         <a href="/">Return to home page</a>
     """)

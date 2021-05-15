@@ -124,22 +124,22 @@ function age(birthday){
     
 
 
-    $.get('/users/emails', function(data){
-        errorMessage = ""
-        console.log("****************************")
-        console.log("Checking for duplicate email")
-        var emails = data['emails']
+    // $.get('/users/emails', function(data){
+    //     errorMessage = ""
+    //     console.log("****************************")
+    //     console.log("Checking for duplicate email")
+    //     var emails = data['emails']
 
-        for(var i=0; i<emails.length; i++){
-            console.log("Data: " + emails[i]);
-            if (value == emails[i]){
-                console.log("Duplicate found!")
-                errorMessage = "This email is already in use"
-            }
-        }
-        console.log("Final message: " + errorMessage)
-        duplicate_email = true
-    });
+    //     for(var i=0; i<emails.length; i++){
+    //         console.log("Data: " + emails[i]);
+    //         if (value == emails[i]){
+    //             console.log("Duplicate found!")
+    //             errorMessage = "This email is already in use"
+    //         }
+    //     }
+    //     console.log("Final message: " + errorMessage)
+    //     duplicate_email = true
+    // });
 
 
 
